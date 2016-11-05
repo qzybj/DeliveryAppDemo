@@ -1,4 +1,10 @@
 {
   "name": "DeliveryApp",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "http://localhost:3000/api/",
+      "proxyUrl": "http://localhost:3000/api/"
+    }
+  ]
 }
