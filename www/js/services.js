@@ -5,7 +5,7 @@
 angular.module('ddApp.services', [])
     .factory("CommonService", function () {
         var service = {
-            baseUrl: 'http://localhost:3000/api/',
+            baseUrl: 'http://m.yintai.ts4me:3000/api/',
             buildUrl: function (subUrl) {
                 return this.baseUrl + subUrl;
             }
@@ -29,7 +29,7 @@ angular.module('ddApp.services', [])
         };
         var service = {
             login: function (user) {
-                return $http.post(CommonService.buildUrl('login'), user).success(function (data, status, headers, config) {
+                return $http.get(CommonService.buildUrl('login'), user).success(function (data, status, headers, config) {
                     utility.doLoginLocal(data);
                 });
             },
